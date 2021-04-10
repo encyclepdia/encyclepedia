@@ -4,6 +4,7 @@ const path = require('path')
 const _ = require('lodash');
 
 exports.createPages = ({ graphql, actions }) => {
+  const tagTemplate = path.resolve('./src/templates/tagsTemplate.js')
   const { createPage } = actions
   const indexPage = path.resolve('./src/pages/index.js')
   createPage({
@@ -65,7 +66,8 @@ exports.createPages = ({ graphql, actions }) => {
         // Make tag pages
         tags.forEach(tag => {
           createPage({
-        path: `tags/${tag}/`
+        path: `tags/${tag}/`,
+        component: tagTemplate,            
          });        
       })		
       })
