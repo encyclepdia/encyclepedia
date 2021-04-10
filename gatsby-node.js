@@ -68,4 +68,4 @@ exports.createPages = ({ graphql, actions }) => {
          });        
       })
   });
-}};
+)}};
