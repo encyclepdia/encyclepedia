@@ -1,6 +1,7 @@
 const each = require('lodash/each')
 const Promise = require('bluebird')
 const path = require('path')
+const _ = require('lodash');
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
