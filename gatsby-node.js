@@ -19,11 +19,11 @@ exports.createPages = ({ graphql, actions }) => {
             allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000) {
               edges {
                 node {
+                  slug,
+                  title,
                  metadata {
                  category
-                 }
-                  slug,
-                  title
+                 }				  
                 }
               }
             }
@@ -66,8 +66,8 @@ exports.createPages = ({ graphql, actions }) => {
           createPage({
         path: `/tags/{tag}/`
          });        
+      })		
       })
-  });
-  )
+    )
   })
-};
+}
