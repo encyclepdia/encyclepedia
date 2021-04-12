@@ -7,9 +7,7 @@ const location = get(this, 'props.location')
 
 const Tags = ({ data }) => {
   return (
-    <Layout location={location}>
       <div>Tags</div>
-    </Layout>
   );
 };
 
