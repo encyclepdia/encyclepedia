@@ -39,12 +39,14 @@ export default ({ children, location }) => (
 
       let rootPath = `/`
       let postsPath = `/posts`
+      let tagsPath = `/tags`  
       if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
         rootPath = __PATH_PREFIX__ + `/`
         postsPath = __PATH_PREFIX__ + `/posts`
+        tagsPath = __PATH_PREFIX__ + `/tags`        
       }
 
-      if (location.pathname === rootPath || location.pathname === postsPath) {
+      if (location.pathname === rootPath || location.pathname === postsPath || location.pathname === tagsPath) {
         header = (
           <BackgroundImage
             Tag="div"
