@@ -5,10 +5,10 @@ import get from 'lodash/get'
 
 const location = get(this, 'props.location')
 
-const Tags = ({pageContext, data }) => {
+const Tags = ({ data }) => {
   return (
       <div>Tags</div>
-        <h1>${data.node.metadata.category}</h1>    
+        <h1>${data}</h1>    
   );
 };
 
