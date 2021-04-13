@@ -8,16 +8,14 @@ const location = get(this, 'props.location')
 const Tags = ({pageContext, data }) => {
   return (
       <div>Tags</div>
-        <h1>${pageContext}</h1>    
+        <h1>${data.node.metadata.category}</h1>    
   );
 };
 
 export default Tags;
 export const pageQuery = graphql`
-    query($tag: String) {
-    allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000,
-  filter: { metadata: { category: { in: [$tag] } } }
-) {
+  query IndexQuery {
+    allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000) {
       edges {
         node {
           metadata {
