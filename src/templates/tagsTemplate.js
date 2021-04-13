@@ -6,9 +6,10 @@ import get from 'lodash/get'
 const location = get(this, 'props.location')
 
 const Tags = ({ data }) => {
+ const { title } = data.cosmicjsSettings.metadata.site_title;
   return (
       <div>Tags</div>
-        <h1>${data}</h1>    
+        <h1>{title}</h1>    
   );
 };
 
