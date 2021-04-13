@@ -50,8 +50,8 @@ class TagIndex extends React.Component {
 }
 export default TagIndex;
 export const pageQuery = graphql`
-  query TagQuery {
-    allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000) {
+  query TagQuery($tag: String!) {
+    allCosmicjsPosts(filter: {metadata: { category: { in: [$tag] } }}, sort: { fields: [created], order: DESC }, limit: 1000) {
       edges {
         node {
           metadata {
