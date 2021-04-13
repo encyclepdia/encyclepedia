@@ -46,7 +46,7 @@ class TagIndex extends React.Component {
 }
 export default TagIndex;
 export const pageQuery = graphql`
-  query IndexQuery {
+  query TagQuery {
     allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000) {
       edges {
         node {
