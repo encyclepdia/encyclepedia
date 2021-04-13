@@ -8,7 +8,7 @@ const location = get(this, 'props.location')
 const Tags = ({pageContext, data }) => {
   return (
       <div>Tags</div>
-        <h1>{pageContext}</h1>    
+        <h1>${pageContext}</h1>    
   );
 };
 
