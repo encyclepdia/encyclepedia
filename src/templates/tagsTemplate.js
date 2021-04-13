@@ -5,29 +5,11 @@ import get from 'lodash/get'
 
 const location = get(this, 'props.location')
 
-const Tags = ({ data }) => {
- const { title } = data.cosmicjsSettings.metadata.site_title;
+const Tags = ({}) => {
   return (
       <div>Tags</div>
-        <h1>{title}</h1>    
   );
 };
 
 export default Tags;
-export const pageQuery = graphql`
-  query IndexQuery {
-    allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000) {
-      edges {
-        node {
-          metadata {
-            description
-            category
-          }
-          slug
-          title
-          created(formatString: "DD MMMM, YYYY")
-        }
-      }
-    }
-  }
-`
+
