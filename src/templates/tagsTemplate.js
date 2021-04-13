@@ -14,7 +14,7 @@ const Tags = ({pageContext, data }) => {
 
 export default Tags;
 export const pageQuery = graphql`
-    query($tag: String) IndexQuery {
+    query($tag: String) {
     allCosmicjsPosts(sort: { fields: [created], order: DESC }, limit: 1000,
   filter: { metadata: { category: { in: [$tag] } } }
 ) {
