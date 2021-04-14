@@ -46,7 +46,7 @@ export default ({ children, location }) => (
         tagsPath = __PATH_PREFIX__ + `/tags`        
       }
 
-      if (location.pathname === rootPath || location.pathname === postsPath) {
+      if (location.pathname === rootPath || location.pathname === postsPath || location.pathname.startsWith(tagsPath)) {
         header = (
           <BackgroundImage
             Tag="div"
