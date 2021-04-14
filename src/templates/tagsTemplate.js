@@ -17,12 +17,12 @@ class TagIndex extends React.Component {
     const posts = get(this, 'props.data.allCosmicjsPosts.edges')
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
     const location = get(this, 'props.location')
-
+    const tag = get(this, 'props.pageContext')
     return (
       <Layout location={location}>
         <Helmet title={siteTitle} />
         <Bio settings={author} />
-        <h1>test</h1>
+        <h1>test {tag}</h1>
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
           return (
