@@ -17,7 +17,7 @@ class TagIndex extends React.Component {
     const posts = get(this, 'props.data.allCosmicjsPosts.edges')
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
     const location = get(this, 'props.location')
-    const tag =  get(this, 'props.data.allCosmicjsPosts.edges.node[0].metadata.category')
+    const tag =  get(this, 'props.data.allCosmicjsPosts.edges[0].node.metadata.category')
     return (
       <Layout location={location}>
         <Helmet title={siteTitle} />
