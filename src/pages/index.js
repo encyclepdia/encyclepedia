@@ -33,9 +33,9 @@ class BlogIndex extends React.Component {
       <Layout location={location}>
         <Helmet title={siteTitle} />
         <Bio settings={author} />
-  tags.forEach(tag => {
-      <small>{tag}</small>
-      })
+
+      <small>{tags}</small>
+
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
           return (
