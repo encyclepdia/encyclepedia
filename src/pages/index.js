@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import get from 'lodash/get'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
-
+const _ = require('lodash');
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
 import Tags from '../components/layout'
