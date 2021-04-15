@@ -18,11 +18,24 @@ class BlogIndex extends React.Component {
     const posts = get(this, 'props.data.allCosmicjsPosts.edges')
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
     const location = get(this, 'props.location')
-
+    
+    let tags = [];
+        // Iterate through each post, putting all found tags into `tags`
+    _.each(posts, edge => {
+      if (_.get(edge, 'node.metadata.category')) {
+       tags = tags.concat(edge.node.metadata.category);
+          }
+    });
+    // Eliminate duplicate tags
+    tags = _.uniq(tags);
+    
     return (
       <Layout location={location}>
         <Helmet title={siteTitle} />
         <Bio settings={author} />
+  tags.forEach(tag => {
+      <small>{tag}</small>
+      })
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
           return (
