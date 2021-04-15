@@ -6,6 +6,7 @@ import { graphql } from 'gatsby'
 
 import Bio from '../components/Bio'
 import Layout from '../components/layout'
+import Tags from '../components/layout'
 import { rhythm } from '../utils/typography'
 
 class BlogIndex extends React.Component {
@@ -39,6 +40,7 @@ class BlogIndex extends React.Component {
               <p
                 dangerouslySetInnerHTML={{ __html: node.metadata.description }}
               />
+            <Tags>{node.metadata.category}</Tags>
             </div>
           )
         })}
@@ -56,6 +58,7 @@ export const pageQuery = graphql`
         node {
           metadata {
             description
+            category
           }
           slug
           title
