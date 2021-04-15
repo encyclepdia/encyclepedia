@@ -36,9 +36,8 @@ class BlogIndex extends React.Component {
 
       <small>{tags}</small>
       {tags.map((tag) =>{
-   return(
   <li>{tag}</li>
-    }))};
+    })};
 
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
