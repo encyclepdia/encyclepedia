@@ -40,7 +40,7 @@ class BlogIndex extends React.Component {
               <p
                 dangerouslySetInnerHTML={{ __html: node.metadata.description }}
               />
-            <Tags>{node.metadata.category}</Tags>
+            <small>{node.metadata.category}</small>
             </div>
           )
         })}
