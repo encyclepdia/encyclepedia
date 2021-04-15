@@ -35,6 +35,9 @@ class BlogIndex extends React.Component {
         <Bio settings={author} />
 
       <small>{tags}</small>
+      {tags.map((tag) =>{
+  <li>{tag}</li>
+    });
 
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
