@@ -90,7 +90,7 @@ export default ({ children, location }) => (
         header = (
           <h3
             style={{
-              fontFamily: 'Proxima Nova',
+              fontFamily: 'Noto Serif JP',
               marginTop: 0,
               marginBottom: rhythm(-1),
               marginLeft: 'auto',
