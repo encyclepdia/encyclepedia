@@ -40,7 +40,17 @@ class BlogIndex extends React.Component {
               <p
                 dangerouslySetInnerHTML={{ __html: node.metadata.description }}
               />
-            <small>{node.metadata.category}</small>
+            <ul style={{ marginBottom: 0, marginLeft: 0, display: "inline-flex" }}
+            <li style = {{
+            borderRadius: `4px`,
+            border: `1px solid grey`,
+            padding: `2px 6px`,
+            marginRight: `5px`,
+            fontSize: `80%`,
+            backgroundColor: "#007acc",
+            color: "white",
+            listStyle: "none"
+}}>{node.metadata.category}</li></ul>
             </div>
           )
         })}
