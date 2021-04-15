@@ -88,7 +88,7 @@ export default ({ children, location }) => (
         header = (
           <h3
             style={{
-              fontFamily: 'Montserrat, sans-serif',
+              fontFamily: 'Proxima Nova',
               marginTop: 0,
               marginBottom: rhythm(-1),
               marginLeft: 'auto',
