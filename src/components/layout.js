@@ -10,6 +10,7 @@ import { rhythm, scale } from '../utils/typography'
 // Import typefaces
 import 'typeface-montserrat'
 import 'typeface-merriweather'
+import 'font-proxima-nova'
 
 export default ({ children, location }) => (
   <StaticQuery
@@ -76,6 +77,7 @@ export default ({ children, location }) => (
                   boxShadow: 'none',
                   textDecoration: 'none',
                   color: 'inherit',
+                  fontFamily: 'Proxima Nova'
                 }}
                 to={'/'}
               >
@@ -120,6 +122,7 @@ export default ({ children, location }) => (
               maxWidth: rhythm(24),
               padding: `0 ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(3 / 4)}`,
               minHeight: 'calc(100vh - 42px)',
+               fontFamily: 'Proxima Nova'  
             }}
           >
             {children}
