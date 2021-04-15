@@ -36,7 +36,7 @@ class BlogIndex extends React.Component {
 
       <small>{tags}</small>
       {tags.map((tag) =>{
-  <li>{tag}</li>
+  <small>{tag} test</small>
     })};
 
         {posts.map(({ node }) => {
