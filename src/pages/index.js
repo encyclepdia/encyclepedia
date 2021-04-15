@@ -52,7 +52,11 @@ class BlogIndex extends React.Component {
             backgroundColor: "#007acc",
             color: "white",
             listStyle: "none"
-}}>{node.metadata.category}</li></ul>
+}}>
+<Link to={`/tags/${node.metadata.category}/`}>
+{node.metadata.category}
+</Link>
+</li></ul>
             </div>
           )
         })}
