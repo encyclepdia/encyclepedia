@@ -42,8 +42,8 @@ class BlogIndex extends React.Component {
               />
             <ul style={{ marginBottom: 0, marginLeft: 0, display: "inline-flex" }}>
             <li 
-            key={node.metadata.category}
-            style = {{
+            key={node.metadata.category}>
+<Link style = {{
             borderRadius: `4px`,
             border: `1px solid grey`,
             padding: `2px 6px`,
@@ -52,8 +52,8 @@ class BlogIndex extends React.Component {
             backgroundColor: "#007acc",
             color: "white",
             listStyle: "none"
-}}>
-<Link to={`/tags/${node.metadata.category}/`}>
+}} 
+to={`/tags/${node.metadata.category}/`}>
 {node.metadata.category}
 </Link>
 </li></ul>
