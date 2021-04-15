@@ -42,7 +42,7 @@ class BlogIndex extends React.Component {
               />
             <ul style={{ marginBottom: 0, marginLeft: 0, display: "inline-flex" }}>
             <li 
-            key={node.metadata.category}>
+            key={node.metadata.category} style = {{ listStyle: "none"}}>
 <Link style = {{
             borderRadius: `4px`,
             border: `1px solid grey`,
