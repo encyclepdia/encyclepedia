@@ -23,7 +23,7 @@ class BlogIndex extends React.Component {
         // Iterate through each post, putting all found tags into `tags`
     _.each(posts, edge => {
       if (_.get(edge, 'node.metadata.category')) {
-       tags = tags.concat(edge.node.metadata.category);
+       tags = tags.push(edge.node.metadata.category);
           }
     });
     // Eliminate duplicate tags
