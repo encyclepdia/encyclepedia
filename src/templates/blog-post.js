@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
     const location = get(this, 'props.location')
     const { previous, next } = this.props.pageContext
-    const category = get(this, 'props.data.cosmicjsPosts.metadata.category')
+
     
     return (
       <Layout location={location}>
@@ -49,7 +49,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <Link to="/">← Back to Posts</Link>
-          <Link to={`/tags/${category}/`}>← Back to {category}</Link>
+          <Link to={`/tags/${post.category}/`}>← Back to {post.category}</Link>
         </div>
         <h1
           style={{
