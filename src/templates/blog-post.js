@@ -49,7 +49,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <Link to="/">← Back to Posts</Link>
-          <Link to={`/tags/${post.category}/`}>← Back to {post.category}</Link>
+          <Link to={`/tags/${post.metadata.category}/`}>← Back to {post.metadata.category}</Link>
         </div>
         <h1
           style={{
@@ -127,8 +127,8 @@ export const pageQuery = graphql`
       content
       title
       created(formatString: "MMMM DD, YYYY")
-      category
       metadata {
+        category
         hero {
           local {
             childImageSharp {
