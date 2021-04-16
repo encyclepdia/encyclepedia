@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
     const location = get(this, 'props.location')
     const { previous, next } = this.props.pageContext
-    const category = get(this, 'props.data.cosmicjsSettings.metadata.category')
+    const category = get(this, 'props.data.cosmicjsPosts.metadata.category')
     
     return (
       <Layout location={location}>
