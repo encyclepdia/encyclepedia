@@ -49,7 +49,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <Link to="/">← Back to Posts</Link>
-          <Link to={`/tags/${cat}/`}>← Back to {cat}</Link>
+          <Link to={`/tags/${category}/`}>← Back to {category}</Link>
         </div>
         <h1
           style={{
