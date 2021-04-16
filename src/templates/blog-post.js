@@ -19,7 +19,8 @@ class BlogPostTemplate extends React.Component {
     const author = get(this, 'props.data.cosmicjsSettings.metadata')
     const location = get(this, 'props.location')
     const { previous, next } = this.props.pageContext
-
+    const category = get(this, 'props.data.cosmicjsSettings.metadata.category')
+    
     return (
       <Layout location={location}>
         <style>
@@ -48,6 +49,7 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <Link to="/">← Back to Posts</Link>
+          <Link to={`/tags/${cat}/`}>← Back to {cat}</Link>
         </div>
         <h1
           style={{
@@ -126,6 +128,7 @@ export const pageQuery = graphql`
       title
       created(formatString: "MMMM DD, YYYY")
       metadata {
+        category
         hero {
           local {
             childImageSharp {
