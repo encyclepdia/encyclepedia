@@ -11,6 +11,7 @@ import { rhythm, scale } from '../utils/typography'
 import 'typeface-montserrat'
 import 'typeface-merriweather'
 import 'typeface-noto-serif-jp'
+import 'typeface-courier-prime'
 
 export default ({ children, location }) => (
   <StaticQuery
@@ -77,7 +78,7 @@ export default ({ children, location }) => (
                   boxShadow: 'none',
                   textDecoration: 'none',
                   color: 'inherit',
-                  fontFamily: 'Noto Serif JP'
+                  fontFamily: 'Courier Prime'
                 }}
                 to={'/'}
               >
@@ -90,7 +91,7 @@ export default ({ children, location }) => (
         header = (
           <h3
             style={{
-              fontFamily: 'Noto Serif JP',
+              fontFamily: 'Courier Prime',
               marginTop: 0,
               marginBottom: rhythm(-1),
               marginLeft: 'auto',
@@ -122,7 +123,7 @@ export default ({ children, location }) => (
               maxWidth: rhythm(24),
               padding: `0 ${rhythm(3 / 4)} ${rhythm(1.5)} ${rhythm(3 / 4)}`,
               minHeight: 'calc(100vh - 42px)',
-               fontFamily: 'Noto Serif JP'  
+               fontFamily: 'Courier Prime'  
             }}
           >
             {children}
