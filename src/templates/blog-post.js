@@ -127,8 +127,8 @@ export const pageQuery = graphql`
       content
       title
       created(formatString: "MMMM DD, YYYY")
+      category
       metadata {
-        category
         hero {
           local {
             childImageSharp {
