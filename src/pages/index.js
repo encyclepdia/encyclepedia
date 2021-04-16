@@ -35,7 +35,23 @@ class BlogIndex extends React.Component {
         <Bio settings={author} />
 
       {tags.map((cat) => (
-  <h1> test {cat}</h1>
+            <ul style={{ marginBottom: 0, marginLeft: 0, display: "inline-block" }}>
+            <li 
+            key={node.metadata.category} style = {{ listStyle: "none"}}>
+<Link style = {{
+            borderRadius: `4px`,
+            border: `1px solid grey`,
+            padding: `2px 6px`,
+            marginRight: `5px`,
+            fontSize: `80%`,
+            backgroundColor: "#007acc",
+            color: "white",
+            listStyle: "none"
+}} 
+to={`/tags/${cat}/`}>
+{cat}
+</Link>
+</li></ul>
 ))}
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
