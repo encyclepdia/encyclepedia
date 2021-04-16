@@ -34,9 +34,9 @@ class BlogIndex extends React.Component {
         <Helmet title={siteTitle} />
         <Bio settings={author} />
 
-      {tags.map(tag => (
+      {tags.map({cat} => (
 
-  <h1>{tag}</h1>
+  <h1>{cat}</h1>
 ))}
         {posts.map(({ node }) => {
           const title = get(node, 'title') || node.slug
